@@ -1,0 +1,397 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o)
+                              c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/crt0.o (exit)
+c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-impure.o)
+                              c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o) (_global_impure_ptr)
+c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-init.o)
+                              c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/crt0.o (__libc_init_array)
+c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-memset.o)
+                              c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/crt0.o (memset)
+c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o)
+                              c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o) (__call_exitprocs)
+c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-atexit.o)
+                              c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o) (atexit)
+c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-fini.o)
+                              c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o) (__libc_fini_array)
+c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                              c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o) (__retarget_lock_acquire_recursive)
+c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__atexit.o)
+                              c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-atexit.o) (__register_exitproc)
+
+Allocating common symbols
+Common symbol       size              file
+
+__lock___atexit_recursive_mutex
+                    0x1               c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+__lock___arc4random_mutex
+                    0x1               c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+__lock___env_recursive_mutex
+                    0x1               c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+__lock___sinit_recursive_mutex
+                    0x1               c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+__lock___malloc_recursive_mutex
+                    0x1               c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+__lock___at_quick_exit_mutex
+                    0x1               c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+__lock___dd_hash_mutex
+                    0x1               c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+__lock___tz_mutex   0x1               c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+__lock___sfp_recursive_mutex
+                    0x1               c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+
+Discarded input sections
+
+ .debug_info    0x00000000       0x43 default\src\main.o
+ .debug_abbrev  0x00000000       0x3b default\src\main.o
+ .debug_aranges
+                0x00000000       0x20 default\src\main.o
+ .debug_ranges  0x00000000       0x10 default\src\main.o
+ .debug_line    0x00000000       0x41 default\src\main.o
+ .debug_str     0x00000000       0x95 default\src\main.o
+ .debug_frame   0x00000000       0x20 default\src\main.o
+ .debug_frame   0x00000000       0x28 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o)
+ .debug_frame   0x00000000       0x34 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-init.o)
+ .debug_frame   0x00000000       0x50 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x68 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000000       0x2c c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-atexit.o)
+ .debug_frame   0x00000000       0x34 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-fini.o)
+ .debug_frame   0x00000000       0xb0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+ .debug_frame   0x00000000       0x3c c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__atexit.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x00008000         0x00078000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crti.o
+LOAD c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtbegin.o
+LOAD c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/crt0.o
+LOAD default\src\main.o
+START GROUP
+LOAD c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1\libgcc.a
+LOAD c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a
+END GROUP
+LOAD c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtend.o
+LOAD c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtn.o
+                [!provide]                PROVIDE (PxPrepareInit = 0x0)
+
+.rom_vectors
+ *(.vectors)
+
+.text           0x00008000      0x66c
+                0x00008000                stext = ABSOLUTE (.)
+                [!provide]                PROVIDE (__stext = ABSOLUTE (.))
+ *(.text*)
+ .text          0x00008000        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crti.o
+ .text          0x00008000       0x70 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtbegin.o
+ .text          0x00008070      0x138 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/crt0.o
+                0x00008070                _stack_init
+                0x000080f8                _start
+                0x000080f8                _mainCRTStartup
+ .text          0x000081a8        0x0 default\src\main.o
+ .text.startup  0x000081a8        0x8 default\src\main.o
+                0x000081a8                main
+ .text          0x000081b0        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o)
+ .text.exit     0x000081b0       0x34 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o)
+                0x000081b0                exit
+ .text          0x000081e4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-impure.o)
+ .text          0x000081e4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-init.o)
+ .text.__libc_init_array
+                0x000081e4       0x88 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-init.o)
+                0x000081e4                __libc_init_array
+ .text          0x0000826c        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-memset.o)
+ .text.memset   0x0000826c      0x11c c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-memset.o)
+                0x0000826c                memset
+ .text          0x00008388        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o)
+ .text.startup.register_fini
+                0x00008388       0x28 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x000083b0      0x138 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o)
+                0x000083b0                __call_exitprocs
+ .text          0x000084e8        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-atexit.o)
+ .text.atexit   0x000084e8       0x20 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-atexit.o)
+                0x000084e8                atexit
+ .text          0x00008508        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-fini.o)
+ .text.__libc_fini_array
+                0x00008508       0x44 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-fini.o)
+                0x00008508                __libc_fini_array
+ .text          0x0000854c        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x0000854c        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                0x0000854c                __retarget_lock_init
+ .text.__retarget_lock_init_recursive
+                0x00008550        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                0x00008550                __retarget_lock_init_recursive
+ .text.__retarget_lock_close
+                0x00008554        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                0x00008554                __retarget_lock_close
+ .text.__retarget_lock_close_recursive
+                0x00008558        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                0x00008558                __retarget_lock_close_recursive
+ .text.__retarget_lock_acquire
+                0x0000855c        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                0x0000855c                __retarget_lock_acquire
+ .text.__retarget_lock_acquire_recursive
+                0x00008560        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                0x00008560                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_try_acquire
+                0x00008564        0x8 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                0x00008564                __retarget_lock_try_acquire
+ .text.__retarget_lock_try_acquire_recursive
+                0x0000856c        0x8 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                0x0000856c                __retarget_lock_try_acquire_recursive
+ .text.__retarget_lock_release
+                0x00008574        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                0x00008574                __retarget_lock_release
+ .text.__retarget_lock_release_recursive
+                0x00008578        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                0x00008578                __retarget_lock_release_recursive
+ .text          0x0000857c        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__atexit.o)
+ .text.__register_exitproc
+                0x0000857c       0xbc c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__atexit.o)
+                0x0000857c                __register_exitproc
+ .text          0x00008638        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtend.o
+ .text          0x00008638        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtn.o
+ *(.gcc_except_table)
+ *(.eh_frame)
+ .eh_frame      0x00008638        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtbegin.o
+ .eh_frame      0x00008638        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtend.o
+ *(.gnu.warning)
+ *(.gnu.linkonce.t*)
+ *(.init)
+ .init          0x0000863c        0xc c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crti.o
+                0x0000863c                _init
+ .init          0x00008648        0xc c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtn.o
+ *(.glue_7)
+ .glue_7        0x00008654        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00008654        0x0 linker stubs
+ *(.fixup)
+ *(.got)
+ *(.fini)
+ .fini          0x00008654        0xc c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crti.o
+                0x00008654                _fini
+ .fini          0x00008660        0xc c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtn.o
+                0x0000866c                etext = .
+                [!provide]                PROVIDE (__etext = .)
+
+.vfp11_veneer   0x0000866c        0x0
+ .vfp11_veneer  0x0000866c        0x0 linker stubs
+
+.v4_bx          0x0000866c        0x0
+ .v4_bx         0x0000866c        0x0 linker stubs
+
+.iplt           0x0000866c        0x0
+ .iplt          0x0000866c        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtbegin.o
+
+.rodata         0x0000866c        0x4
+ *(.rodata*)
+ .rodata._global_impure_ptr
+                0x0000866c        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-impure.o)
+                0x0000866c                _global_impure_ptr
+ *(.rodata.*)
+ *(.toc)
+ *(.gnu.linkonce.r*)
+                0x00008670                . = ALIGN (0x4)
+
+.ARM.extab      0x00008670        0x0
+ .ARM.extab     0x00008670        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/crt0.o
+
+.ARM.exidx      0x00008670        0x8
+ .ARM.exidx     0x00008670        0x8 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/crt0.o
+                                 0x10 (size before relaxing)
+
+.rel.dyn        0x00008678        0x0
+ .rel.iplt      0x00008678        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtbegin.o
+
+.rodata1        0x00008678        0x0
+ *(.rodata1)
+                0x00008678                . = ALIGN (0x4)
+
+.jcr            0x00008678        0x0
+ *(.jcr)
+                0x00008678                . = ALIGN (0x4)
+
+.data           0x00008678      0x434
+                0x00008678                __ram_data_start = ABSOLUTE (.)
+ *(.data*)
+ .data          0x00008678        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crti.o
+ .data          0x00008678        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtbegin.o
+                0x00008678                __dso_handle
+ .data          0x0000867c        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/crt0.o
+ .data          0x0000867c        0x0 default\src\main.o
+ .data          0x0000867c        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o)
+ .data          0x0000867c        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x0000867c        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-impure.o)
+                0x0000867c                _impure_ptr
+ .data.impure_data
+                0x00008680      0x428 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-impure.o)
+ .data          0x00008aa8        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-init.o)
+ .data          0x00008aa8        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-memset.o)
+ .data          0x00008aa8        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o)
+ .data.__atexit_recursive_mutex
+                0x00008aa8        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o)
+                0x00008aa8                __atexit_recursive_mutex
+ .data          0x00008aac        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-atexit.o)
+ .data          0x00008aac        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-fini.o)
+ .data          0x00008aac        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+ .data          0x00008aac        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__atexit.o)
+ .data          0x00008aac        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtend.o
+ .data          0x00008aac        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtn.o
+ *(.gnu.linkonce.d*)
+ *(.data1)
+                0x00008aac                _GOT1_START_ = ABSOLUTE (.)
+ *(.got1)
+                0x00008aac                _GOT1_END_ = ABSOLUTE (.)
+                0x00008aac                _GOT2_START_ = ABSOLUTE (.)
+ *(.got2)
+                0x00008aac                _GOT2_END_ = ABSOLUTE (.)
+                0x00008aac                . = ALIGN (0x4)
+                0x00008aac                __DEVTAB__ = ABSOLUTE (.)
+ *(SORT_BY_NAME(.devtab*))
+                0x00008aac                __DEVTAB_END__ = ABSOLUTE (.)
+                0x00008aac                __NETDEVTAB__ = ABSOLUTE (.)
+ *(SORT_BY_NAME(.netdevtab*))
+                0x00008aac                __NETDEVTAB_END__ = ABSOLUTE (.)
+                0x00008aac                __CTOR_LIST__ = ABSOLUTE (.)
+ *(SORT_BY_NAME(.ctors*))
+                0x00008aac                __CTOR_END__ = ABSOLUTE (.)
+                0x00008aac                __DTOR_LIST__ = ABSOLUTE (.)
+ *(SORT_BY_NAME(.dtors*))
+                0x00008aac                __DTOR_END__ = ABSOLUTE (.)
+ *(.dynamic)
+ *(.sdata*)
+ *(.sbss*)
+                0x00008678                __rom_data_start = LOADADDR (.data)
+                0x00008aac                __ram_data_end = .
+                [!provide]                PROVIDE (__ram_data_end = .)
+                0x00008aac                _edata = .
+                [!provide]                PROVIDE (edata = .)
+                [!provide]                PROVIDE (__rom_data_end = (LOADADDR (.data) + SIZEOF (.data)))
+
+.init_array     0x00008aac        0x4
+ .init_array    0x00008aac        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtbegin.o
+
+.fini_array     0x00008ab0        0x4
+ .fini_array    0x00008ab0        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtbegin.o
+
+.igot.plt       0x00008ab4        0x0
+ .igot.plt      0x00008ab4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtbegin.o
+
+.init_array.00000
+                0x00008ab4        0x4
+ .init_array.00000
+                0x00008ab4        0x4 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o)
+
+.bss            0x00008ab8       0x3d
+                0x00008ab8                . = ALIGN (0x4)
+                0x00008ab8                __bss_start = ABSOLUTE (.)
+ *(.scommon)
+ *(.dynbss)
+ *(.bss*)
+ .bss           0x00008ab8        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crti.o
+ .bss           0x00008ab8       0x1c c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtbegin.o
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/crt0.o
+ .bss           0x00008ad4        0x0 default\src\main.o
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o)
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-impure.o)
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-init.o)
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-memset.o)
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o)
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-atexit.o)
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-fini.o)
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__atexit.o)
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtend.o
+ .bss           0x00008ad4        0x0 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtn.o
+ *(.gnu.linkonce.b*)
+ *(COMMON)
+ COMMON         0x00008ad4       0x21 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+                0x00008ad4                __lock___atexit_recursive_mutex
+                0x00008ad8                __lock___arc4random_mutex
+                0x00008adc                __lock___env_recursive_mutex
+                0x00008ae0                __lock___sinit_recursive_mutex
+                0x00008ae4                __lock___malloc_recursive_mutex
+                0x00008ae8                __lock___at_quick_exit_mutex
+                0x00008aec                __lock___dd_hash_mutex
+                0x00008af0                __lock___tz_mutex
+                0x00008af4                __lock___sfp_recursive_mutex
+                0x00008af5                __bss_end = ABSOLUTE (.)
+                0x00008af8                . = ALIGN (0x4)
+                0x00008af8                _end = .
+                [!provide]                PROVIDE (end = .)
+                [!provide]                PROVIDE (__end__ = .)
+                [!provide]                PROVIDE (__HEAP = .)
+                [!provide]                PROVIDE (__heap_end__ = (. + 0x8000))
+                [!provide]                PROVIDE (__HEAP_END = (. + 0x8000))
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(default\myfirstarm.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x00000000       0x26
+ .ARM.attributes
+                0x00000000       0x1c c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crti.o
+ .ARM.attributes
+                0x0000001c       0x2a c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtbegin.o
+ .ARM.attributes
+                0x00000046       0x1a c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/crt0.o
+ .ARM.attributes
+                0x00000060       0x2a default\src\main.o
+ .ARM.attributes
+                0x0000008a       0x2a c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o)
+ .ARM.attributes
+                0x000000b4       0x30 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000000e4       0x2a c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000010e       0x2a c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000138       0x2a c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x00000162       0x2a c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x0000018c       0x2a c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-fini.o)
+ .ARM.attributes
+                0x000001b6       0x2a c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-lock.o)
+ .ARM.attributes
+                0x000001e0       0x2a c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x0000020a       0x30 c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtend.o
+ .ARM.attributes
+                0x0000023a       0x1c c:/mingw/arm/9 2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/crtn.o
+
+.comment        0x00000000       0x4c
+ .comment       0x00000000       0x4c default\src\main.o
+                                 0x4d (size before relaxing)
