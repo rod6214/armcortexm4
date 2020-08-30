@@ -1,5 +1,5 @@
 # Compile
-arm-none-eabi-as -mapcs-32 -mcpu=cortex-m4 -mthumb -o program.o main.S
+arm-none-eabi-as -mapcs-32 -mcpu=cortex-m4 -march=armv7 -o program.o main.S
 # Link
 arm-none-eabi-ld -T linker -o program.elf program.o
 arm-none-eabi-ld -Ttext=0x80001ac -TVectorTable=0x8000000 -o program.elf program.o
