@@ -76,7 +76,8 @@ values:
 _Reset_Handler:
     @ b _Reset_Handler
 _start:
-    bl _porta9_config
+    @ bl _porta9_config
+    bl main
 _stop:
     b _stop
 
