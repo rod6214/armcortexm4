@@ -37,8 +37,6 @@
 .set __GPIOB_AFRL, __GPIOA + 0x20
 .set __GPIOB_AFRH, __GPIOA + 0x24
 
-
-
 .set __FMC_CONTROLLER, 0xA000
 .set __FMC_SDCR1, 0x140
 

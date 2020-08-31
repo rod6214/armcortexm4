@@ -1,7 +1,7 @@
 .syntax unified
 .cpu cortex-m4
 .fpu softvfp
-.thumb
+@ .thumb
 
 .global isr_Vectors
 .global Default_Handler
@@ -15,7 +15,7 @@ Reset_Handler:
     b main_loop
 
 main_loop:
-    bl main
+    b main
     b main_loop
 
 @ Infinity loop for unmanage interrupt
