@@ -5,7 +5,8 @@ gcchelps
 helps
 ldhelps
 objcopyhelps
-*[helps]
+flashmemsts
+stlinkhelps
 *.bin
 *.elf
 *.hex
