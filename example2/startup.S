@@ -139,7 +139,7 @@ isr_Vectors:
   .word     LTDC_ER_IRQHandler                /* LTDC_ER_IRQHandler			  */
   .word     DMA2D_IRQHandler                  /* DMA2D                        */
 
-  .weak      NMI_Handler
+   .weak      NMI_Handler
    .thumb_set NMI_Handler,Default_Handler
 
    .weak      HardFault_Handler
