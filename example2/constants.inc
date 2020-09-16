@@ -18,7 +18,8 @@
 .set __GPIOH, __AHB1 + 0x1C0
 .set __RCC, __AHB1 + 0x3800
 .set __RTC, __APB1 + 0x2800
-.set __TIM1, __APB2 + 0x0000
+.set __TIM1, __APB1 + 0x0000
+.set __TIM2, __APB2 + 0x0000
 .set __TIM8, __APB2 + 0x0400
 
 .set __GPIOA_MODER, __GPIOA
@@ -87,6 +88,29 @@
 .set __TIM1_DCR, __TIM1 + 0x48
 .set __TIM1_DMAR, __TIM1 + 0x4C
 
+.set __TIM2_CR1, __TIM2+ 0x00
+.set __TIM2_CR2, __TIM2 + 0x04
+.set __TIM2_SMCR, __TIM2 + 0x08
+.set __TIM2_DIER, __TIM2 + 0x0C
+.set __TIM2_SR, __TIM2 + 0x10
+.set __TIM2_EGR, __TIM2 + 0x14
+.set __TIM2_CCMR1, __TIM2 + 0x18
+.set __TIM2_CCMR1, __TIM2 + 0x18
+.set __TIM2_CCMR2, __TIM2 + 0x1C
+.set __TIM2_CCMR2, __TIM2 + 0x1C
+.set __TIM2_CCER, __TIM2 + 0x20
+.set __TIM2_CNT, __TIM2 + 0x24
+.set __TIM2_PSC, __TIM2 + 0x28
+.set __TIM2_ARR, __TIM2 + 0x2C
+.set __TIM2_RCR, __TIM2 + 0x30
+.set __TIM2_CCR1, __TIM2 + 0x34
+.set __TIM2_CCR2, __TIM2 + 0x38
+.set __TIM2_CCR3, __TIM2 + 0x3C
+.set __TIM2_CCR4, __TIM2 + 0x40
+.set __TIM2_BDTR, __TIM2 + 0x44
+.set __TIM2_DCR, __TIM2 + 0x48
+.set __TIM2_DMAR, __TIM2 + 0x4C
+
 .set __TIM8_CR1, __TIM8 + 0x00
 .set __TIM8_CR2, __TIM8 + 0x04
 .set __TIM8_SMCR, __TIM8 + 0x08
@@ -118,6 +142,8 @@
 .set __RCC_PLLCFGR, __RCC + 4
 .set __RCC_BDCR, __RCC + 0x70
 .set __RCC_AHB1ENR, __RCC + 0x30
+.set __RCC_APB1ENR, __RCC + 0x40
+.set __RCC_APB2ENR, __RCC + 0x44
 
 .set __SYSCFG, 0x4001
 .set __SYSCFG_MEMRMP, 0x3000
@@ -127,3 +153,5 @@
 
 .set __SCB_REG, 0xE000
 .set __AIRCR, 0xED00 + 0x0C
+
+.set __NVIC_ISER0, 0xE000E100

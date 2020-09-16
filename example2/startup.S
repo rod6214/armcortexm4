@@ -8,7 +8,7 @@
 
 @ Entry point
 .section .text.Reset_Handler
-.weak Reset_Handler
+.global Reset_Handler
 .type Reset_Handler, %function
 Reset_Handler:
     ldr sp, =_estack
@@ -17,6 +17,23 @@ Reset_Handler:
 main_loop:
     b main
     b main_loop
+
+@ .section .text.TIM2_IRQHandler
+.section .text.TIM2_IRQHandler,"ax", %progbits
+.global TIM2_IRQHandler
+@ .type TIM2_IRQHandler, %function
+TIM2_IRQHandler:
+    push {lr}
+    ldr r0, =__TIM2_CR1
+    ldr r2, =TIM1_CR1_CONFIG @ Configure ARPE | URS | CEN
+    str r2, [r0]
+test:
+    b test
+    @ bl tim1_irq
+    @ mov r6, 0xff
+    pop {lr}
+    blx lr
+    .size  TIM2_IRQHandler, .-TIM2_IRQHandler
 
 @ Infinity loop for unmanage interrupt
 .section .text.Default_Handler, "ax", %progbits
@@ -250,8 +267,8 @@ isr_Vectors:
    .weak      TIM1_CC_IRQHandler
    .thumb_set TIM1_CC_IRQHandler,Default_Handler
 
-   .weak      TIM2_IRQHandler
-   .thumb_set TIM2_IRQHandler,Default_Handler
+@    .weak      TIM2_IRQHandler
+@    .thumb_set TIM2_IRQHandler,Default_Handler
 
    .weak      TIM3_IRQHandler
    .thumb_set TIM3_IRQHandler,Default_Handler
