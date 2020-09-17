@@ -24,8 +24,9 @@ arm-none-eabi-objdump -b binary -m arm -D program.bin -Mforce-thumb --adjust-vma
 # To compile C
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"./main.d" -MT"./main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "./main.o" "./main.S"
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"./main.d" -MT"./main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "./startup.o" "./startup.S" (latest)
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c  --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "./registers.o" "./registers.c"
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c  --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "./main.o" "./main.c"
-arm-none-eabi-ld -T linker -S -o program.elf main.o startup.o (latest)
+arm-none-eabi-ld -T linker -S -o program.elf main.o startup.o registers.o (latest)
 arm-none-eabi-objcopy -O binary program.elf program.bin (latest)
 arm-none-eabi-objdump -d program.elf > dis (latest)
 arm-none-eabi-objdump -d -s program.elf > dis2 (latest)

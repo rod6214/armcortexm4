@@ -1,4 +1,8 @@
 
+#ifndef __REGISTERS__HD
+#define __REGISTERS__HD
+
+
 #define __OTYPER 0x04
 #define __OSPEEDR 0x08
 #define __PUPDR 0x0C
@@ -32,6 +36,23 @@
 #define __RCC_PLLCFGR (__RCC + 4)
 #define __RCC_BDCR (__RCC + 0x70)
 #define __RCC_AHB1ENR (__RCC + 0x30)
+
+#define RCC_BASE (0x40023800)
+#define TIM2_BASE (0x40010000)
+#define NVIC_BASE (0xE000E000)
+#define NVIC_ISER_BASE (NVIC_BASE + 0x100)
+#define NVIC_ICER_BASE (NVIC_BASE + 0x180)
+#define NVIC_ISPR_BASE (NVIC_BASE + 0x200)
+#define NVIC_ICPR_BASE (NVIC_BASE + 0x280)
+#define NVIC_IABR_BASE (NVIC_BASE + 0x300)
+#define NVIC_IPR_BASE (NVIC_BASE + 0x400)
+#define NVIC_STIR_BASE (NVIC_BASE + 0xE00)
+#define RCC ((RCC_type *)RCC_BASE)
+#define TIM2 ((TIM_type *)TIM2_BASE)
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct   {
 volatile int CR; //0x00
@@ -70,7 +91,7 @@ volatile int SSCGR; //0x80
 volatile int PLLI2SCFGR; //0x84
 volatile int PLLSAICFGR; //0x88
 volatile int DCKCFGR; //0x8C
-} _RCC_type;
+} RCC_type;
 
 typedef struct {
 volatile int CR1; //0x00
@@ -94,9 +115,22 @@ unsigned int reserved2; //0x44
 volatile int DCR; //0x48
 volatile int DMAR; //0x4C
 volatile int TIMx_OR; //0x50
-} _TIM_type;
+} TIM_type;
 
-#define RCC_BASE (0x40023800)
-#define TIM2_BASE (0x40010000)
-#define RCC ((_RCC_type *)RCC_BASE)
-#define TIM2 ((_TIM_type *)TIM2_BASE)
+typedef struct {
+unsigned int* ISER;
+unsigned int* ICER;
+unsigned int* ISPR;
+unsigned int* ICPR;
+unsigned int* IABR;
+unsigned int* IPR;
+unsigned int* STIR;
+} NVIC_type;
+
+extern NVIC_type* NVIC_GetRegister();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /*__REGISTERS__HD*/
