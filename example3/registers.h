@@ -1,7 +1,5 @@
-
 #ifndef __REGISTERS__HD
 #define __REGISTERS__HD
-
 
 #define __OTYPER 0x04
 #define __OSPEEDR 0x08
@@ -37,9 +35,27 @@
 #define __RCC_BDCR (__RCC + 0x70)
 #define __RCC_AHB1ENR (__RCC + 0x30)
 
+// #define SET_BITPAIR_HIGH_REGISTER(__register__, bit, option, offset) (__register__) |= (option << (bit*2 + offset))
+// #define SET_BITPAIR_LOW_REGISTER(__register__, bit, option) (__register__) |= (option << bit)
+// #define RESET_BITPAIR_HIGH_REGISTER(__register__, bit, option, offset) (__register__) &= ~(option << (bit*2 + offset))
+// #define RESET_BITPAIR_LOW_REGISTER(__register__, bit, option) (__register__) &= ~(option << bit)
+
+#define SET_BIT_HIGH_REGISTER(__register__, bit) (__register__) |= ((1UL << (bit + 16)) & ~0x0FFFFUL)
+#define SET_BIT_LOW_REGISTER(__register__, bit) (__register__) |= ((1UL << bit) & 0x0FFFFUL)
+#define RESET_BIT_HIGH_REGISTER(__register__, bit) (__register__) &= (~(1UL << (bit + 16)) & ~0x0FFFFUL)
+#define RESET_BIT_LOW_REGISTER(__register__, bit) (__register__) &= ((~(1UL << bit)) & 0x0FFFFUL)
+
+// #define GET_BITPAIR_HIGH_REGISTER(__register__, bit, option) ((__register__) & (option << bit*2)) == (option << bit*2)
+// #define GET_BITPAIR_LOW_REGISTER(__register__, bit, option) ((__register__) & (option << bit)) == (option << bit)
+// #define GET_BIT_HIGH_REGISTER(__register__, bit) ((__register__) & (option << bit*2)) == (option << (bit + 16))
+// #define GET_BIT_LOW_REGISTER(__register__, bit) ((__register__) & (option << bit)) == (option << bit)
+#define COMPARE_BITS(__register__, pos, width) ((__register__) & (width << pos)) == (width << pos)
+#define GET_BIT_REGISTER(__register__, bit) COMPARE_BITS(__register__, bit, 1UL)
+
 #define RCC_BASE (0x40023800)
-#define TIM2_BASE (0x40010000)
+#define TIM2_BASE (0x40000000)
 #define NVIC_BASE (0xE000E000)
+#define GPIOA_BASE (0x40020000)
 #define NVIC_ISER_BASE (NVIC_BASE + 0x100)
 #define NVIC_ICER_BASE (NVIC_BASE + 0x180)
 #define NVIC_ISPR_BASE (NVIC_BASE + 0x200)
@@ -49,6 +65,18 @@
 #define NVIC_STIR_BASE (NVIC_BASE + 0xE00)
 #define RCC ((RCC_type *)RCC_BASE)
 #define TIM2 ((TIM_type *)TIM2_BASE)
+#define GPIOA ((GPIO_type *)GPIOA_BASE)
+
+#define TIM_SR_UIF_Bit 0
+#define TIM_SR_CC1IF_Bit 1
+#define TIM_SR_CC2IF_Bit 2
+#define TIM_SR_CC3IF_Bit 3
+#define TIM_SR_CC4IF_Bit 4
+#define TIM_SR_TIF_Bit 6
+#define TIM_SR_CC1OF_Bit 9
+#define TIM_SR_CC2OF_Bit 10
+#define TIM_SR_CC3OF_Bit 11
+#define TIM_SR_CC4OF_Bit 12
 
 #ifdef __cplusplus
 extern "C" {
@@ -127,7 +155,21 @@ unsigned int* IPR;
 unsigned int* STIR;
 } NVIC_type;
 
+typedef struct {
+volatile int MODER; //0x00
+volatile int OTYPER;//0x04
+volatile int OSPEEDER; //0x08
+volatile int PUPDR; //0x0C
+volatile int IDR; //0x10
+volatile int ODR; //0x14
+volatile int BSRR; //0x18
+volatile int LCKR; //0x1c
+volatile int AFRL; //0x20
+volatile int AFRH; //0x24
+} GPIO_type;
+
 extern NVIC_type* NVIC_GetRegister();
+extern void GPIO_TogglePin(GPIO_type* gpio, int pin);
 
 #ifdef __cplusplus
 }

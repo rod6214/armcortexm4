@@ -18,4 +18,41 @@ void TIM_RESET_flags(TIM_type* timx) {
     if (IS_TIM_IT_FLAG(timx, TIMx_UIF) != NFALSE) {
         RESET_TIM_IT_FLAG(timx, TIMx_UIF);
     }
+    if (IS_TIM_IT_FLAG(timx, TIMx_CC1IF) != NFALSE) {
+        RESET_TIM_IT_FLAG(timx, TIMx_CC1IF);
+    }
+    if (IS_TIM_IT_FLAG(timx, TIMx_CC2IF) != NFALSE) {
+        RESET_TIM_IT_FLAG(timx, TIMx_CC2IF);
+    }
+    if (IS_TIM_IT_FLAG(timx, TIMx_CC3IF) != NFALSE) {
+        RESET_TIM_IT_FLAG(timx, TIMx_CC3IF);
+    }
+    if (IS_TIM_IT_FLAG(timx, TIMx_CC4IF) != NFALSE) {
+        RESET_TIM_IT_FLAG(timx, TIMx_CC4IF);
+    }
+    if (IS_TIM_IT_FLAG(timx, TIMx_TIF) != NFALSE) {
+        RESET_TIM_IT_FLAG(timx, TIMx_TIF);
+    }
+    if (IS_TIM_IT_FLAG(timx, TIMx_CC1OF) != NFALSE) {
+        RESET_TIM_IT_FLAG(timx, TIMx_CC1OF);
+    }
+    if (IS_TIM_IT_FLAG(timx, TIMx_CC2OF) != NFALSE) {
+        RESET_TIM_IT_FLAG(timx, TIMx_CC2OF);
+    }
+    if (IS_TIM_IT_FLAG(timx, TIMx_CC3OF) != NFALSE) {
+        RESET_TIM_IT_FLAG(timx, TIMx_CC3OF);
+    }
+    if (IS_TIM_IT_FLAG(timx, TIMx_CC4OF) != NFALSE) {
+        RESET_TIM_IT_FLAG(timx, TIMx_CC4OF);
+    }
+}
+
+void GPIO_TogglePin(GPIO_type* gpio, int pin) {
+    static int counter = 0;
+    if (GET_BIT_REGISTER(gpio->ODR, pin)) {
+        SET_BIT_HIGH_REGISTER(gpio->BSRR, pin); // Reset
+    }
+    else {
+        SET_BIT_LOW_REGISTER(gpio->BSRR, pin);
+    } 
 }

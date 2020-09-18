@@ -3,51 +3,32 @@
 
 int main() {
     NVIC_type* _nvic = NVIC_GetRegister();
-    // int* __ahb1en = ((int*)__RCC_AHB1ENR);
-    // int* __gpiomoder = ((int*)__GPIOA_MODER);
-    // int* __gpioddr = ((int*)__GPIOA_ODR);
-    // int* __tim2 = ((int*)0x40010000);
-    // _RCC* __rcc = ((_RCC*)0x40023800);
-    // volatile int* __rcc2 = ((int*)0x40023800);
-    // __rcc2[0] = 1;
-    // RCC_APB2ENR
-    RCC->APB2ENR = 1;
-    // NVIC_ISER0
+
+    RCC->APB1ENR |= 1;
+    RCC->AHB1ENR |= 1;
     _nvic->ISER[0] = (1UL << 28);
-    // NVIC_ISPR0
-    _nvic->ISPR[0] = (1UL << 28);
-    // TIM2_PSC
+    GPIOA->MODER |= (1UL << 18);
+    GPIOA->PUPDR |= (2UL << 18);
+    TIM_RESET_flags_ALL(TIM2);
     TIM2->PSC = 15;
-    // TIM2_ARR
     TIM2->ARR = 200;
-    // TIM2_CR1
     TIM2->CR1 = 1;
-    // TIM2_DIER
     TIM2->DIER = 1;
-
-
-    // *__ahb1en |= 1;
-    // *__gpiomoder |= 1 << 18;
-    // *__gpioddr |= 512;
-
-    while(1) {
-
-    }
+    
+    while(1);
 
     return 0;
 }
 
+int count = 0;
+
 void TIM2_IRQHandler() {
     TIM2->CR1 = 0;
-    TIM_RESET_flags(TIM2);
-
-    while (1)
-    {
-        /* code */
+    if (count > 2000) {
+        GPIO_TogglePin(GPIOA, 9);
+        count = 0;
     }
-    
-    // TIM2->CR1 = 1;
-    // while(1) {
-
-    // }
+    count++;
+    TIM_RESET_flags(TIM2);
+    TIM2->CR1 = 1;
 }

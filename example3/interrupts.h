@@ -15,17 +15,6 @@
 #define TIMx_CC3OF 2048
 #define TIMx_CC4OF 4096
 
-#define UIFBit 0
-#define CC1IFBit 1
-#define CC2IFBit 2
-#define CC3IFBit 3
-#define CC4IFBit 4
-#define TIFBit 6
-#define CC1OFBit 9
-#define CC2OFBit 10
-#define CC3OFBit 11
-#define CC4OFBit 12
-
 #define NFALSE 0
 #define NTRUE 1
 
@@ -42,5 +31,9 @@ extern void TIM_RESET_flags(TIM_type* timx);
 #ifdef __cplusplus
 }
 #endif
+
+#define TIM_RESET_flags_ALL(timx) do {                          \
+                                        TIM_RESET_flags(timx);   \
+                                    } while(0)
 
 #endif /*__INTERRUPTS_HD__*/
