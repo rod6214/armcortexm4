@@ -66,7 +66,7 @@
 #define RCC ((RCC_type *)RCC_BASE)
 #define TIM2 ((TIM_type *)TIM2_BASE)
 #define GPIOA ((GPIO_type *)GPIOA_BASE)
-
+// TIM register bits
 #define TIM_SR_UIF_Bit 0
 #define TIM_SR_CC1IF_Bit 1
 #define TIM_SR_CC2IF_Bit 2
@@ -77,6 +77,130 @@
 #define TIM_SR_CC2OF_Bit 10
 #define TIM_SR_CC3OF_Bit 11
 #define TIM_SR_CC4OF_Bit 12
+// RCC_CR register bits
+#define RCC_CR_PLLSAIRDY_Bit 29
+#define RCC_CR_PLLSAION_Bit 28
+#define RCC_CR_PLLI2SRDY_Bit 27
+#define RCC_CR_PLLRDY_Bit 25
+#define RCC_CR_PLLON_Bit 24
+#define RCC_CR_CSSON_Bit 19
+#define RCC_CR_HSEBYP_Bit 18
+#define RCC_CR_HSERDY_Bit 17
+#define RCC_CR_HSEON_Bit 16
+#define RCC_CR_HSICAL_8Bits 8
+#define RCC_CR_HSITRIM_5Bits 3
+#define RCC_CR_HSION_Bit 1
+// RCC_PLLCFGR register bits
+#define RCC_PLLCFGR_PLLQ_4Bits 24
+#define RCC_PLLCFGR_PLLSRC_Bit 22
+#define RCC_PLLCFGR_PLLP_2Bits 16
+#define RCC_PLLCFGR_PLLN_9Bits 6
+#define RCC_PLLCFGR_PLLM_6Bits 0
+// RCC_CFGR register bits
+#define RCC_CFGR_MCO2_2Bits 30
+#define RCC_CFGR_MCO2PRE_3Bits 29
+#define RCC_CFGR_MCO1PRE_3Bits 26
+#define RCC_CFGR_I2SSRC_2Bits 23
+#define RCC_CFGR_MCO1_2Bits 21
+#define RCC_CFGR_RTCPRE_5Bits 16
+#define RCC_CFGR_PPRE2_3Bits 13
+#define RCC_CFGR_PPRE1_3Bits 10
+#define RCC_CFGR_HPRE_4Bits 4
+#define RCC_CFGR_SWS_2Bits 2
+#define RCC_CFGR_SW_2Bits 0
+// RCC_CIR register bits
+#define RCC_CIR_CSSC_Bit 23
+#define RCC_CIR_PLLSAIRDYC_Bit 22
+#define RCC_CIR_PLLI2SRDYC_Bit 21
+#define RCC_CIR_PLLRDYC_Bit 20
+#define RCC_CIR_HSERDYC_Bit 19
+#define RCC_CIR_HSIRDYC_Bit 18
+#define RCC_CIR_LSERDYC_Bit 17
+#define RCC_CIR_LSIRDYC_Bit 16
+#define RCC_CIR_PLLSAIRDYIE_Bit 14
+#define RCC_CIR_PLLI2SRDYIE_Bit 13
+#define RCC_CIR_PLLRDYIE_Bit 12
+#define RCC_CIR_HSERDYIE_Bit 11
+#define RCC_CIR_HSIRDYIE_Bit 10
+#define RCC_CIR_LSERDYIE_Bit 9
+#define RCC_CIR_LSIRDYIE_Bit 8
+#define RCC_CIR_CSSF_Bit 7
+#define RCC_CIR_PLLSAIRDYF_Bit 6
+#define RCC_CIR_PLLI2SRDYF_Bit 5
+#define RCC_CIR_PLLRDYF_Bit 4
+#define RCC_CIR_HSERDYF_Bit 3
+#define RCC_CIR_HSIRDYF_Bit 2
+#define RCC_CIR_LSERDYF_Bit 1
+#define RCC_CIR_LSIRDYF_Bit 0
+// RCC AHB1 peripheral clock register (RCC_AHB1ENR)
+#define RCC_AHB1ENR_DMA2EN_Bit 22
+#define RCC_AHB1ENR_DMA1EN_Bit 21
+#define RCC_AHB1ENR_BKPSRAMEN_Bit 18
+#define RCC_AHB1ENR_CRCEN_Bit 12
+#define RCC_AHB1ENR_GPIOKEN_Bit 10
+#define RCC_AHB1ENR_GPIOJEN_Bit 20
+#define RCC_AHB1ENR_GPIOIEN_Bit 9
+#define RCC_AHB1ENR_GPIOHEN_Bit 8
+#define RCC_AHB1ENR_GPIOGEN_Bit 7
+#define RCC_AHB1ENR_GPIOFEN_Bit 6
+#define RCC_AHB1ENR_GPIOEEN_Bit 5
+#define RCC_AHB1ENR_GPIODEN_Bit 4
+#define RCC_AHB1ENR_GPIOCEN_Bit 3
+#define RCC_AHB1ENR_GPIOBEN_Bit 2
+#define RCC_AHB1ENR_GPIOAEN_Bit 1
+// RCC AHB2 peripheral clock enable register (RCC_AHB2ENR)
+#define AHB2ENR_OTGFSEN_Bit 9
+#define AHB2ENR_RNGEN_Bit 8
+#define AHB2ENR_HASHEN_Bit 7
+#define AHB2ENR_CRYPEN_Bit 6
+#define AHB2ENR_DCMIEN_Bit 5
+// RCC AHB3 peripheral clock enable register (RCC_AHB3ENR)
+#define AHB3ENR_FMCEN_Bit 0
+// RCC APB1 peripheral clock enable register (RCC_APB1ENR)
+#define APB1ENR_UART8EN_Bit 31
+#define APB1ENR_UART7EN_Bit 30
+#define APB1ENR_DACEN_Bit 29
+#define APB1ENR_PWREN_Bit 28
+#define APB1ENR_CAN2EN_Bit 26
+#define APB1ENR_CAN1EN_Bit 25
+#define APB1ENR_I2C3EN_Bit 23
+#define APB1ENR_I2C2EN_Bit 22
+#define APB1ENR_I2C1EN_Bit 21
+#define APB1ENR_UART5EN_Bit 20
+#define APB1ENR_UART4EN_Bit 19
+#define APB1ENR_USART3EN_Bit 18
+#define APB1ENR_USART2EN_Bit 17
+#define APB1ENR_SPI3EN_Bit 15
+#define APB1ENR_SPI2EN_Bit 14
+#define APB1ENR_WWDGEN_Bit 11
+#define APB1ENR_TIM14EN_Bit 8
+#define APB1ENR_TIM13EN_Bit 7
+#define APB1ENR_TIM12EN_Bit 6
+#define APB1ENR_TIM7EN_Bit 5
+#define APB1ENR_TIM6EN_Bit 4
+#define APB1ENR_TIM5EN_Bit 3
+#define APB1ENR_TIM4EN_Bit 2
+#define APB1ENR_TIM3EN_Bit 1
+#define APB1ENR_TIM2EN_Bit 0
+// RCC APB2 peripheral clock enable register (RCC_APB2ENR)
+#define APB2ENR_LTDCEN_Bit 26
+#define APB2ENR_SAI1EN_Bit 22
+#define APB2ENR_SPI6EN_Bit 21
+#define APB2ENR_SPI5EN_Bit 20
+#define APB2ENR_TIM11EN_Bit 18
+#define APB2ENR_TIM10EN_Bit 17
+#define APB2ENR_TIM9EN_Bit 16
+#define APB2ENR_SYSCFGEN_Bit 14
+#define APB2ENR_SPI4EN_Bit 13
+#define APB2ENR_SPI1EN_Bit 12
+#define APB2ENR_SDIOEN_Bit 11
+#define APB2ENR_ADC3EN_Bit 10
+#define APB2ENR_ADC2EN_Bit 9
+#define APB2ENR_ADC1EN_Bit 8
+#define APB2ENR_USART6EN_Bit 5
+#define APB2ENR_USART1EN_Bit 4
+#define APB2ENR_TIM8EN_Bit 1
+#define APB2ENR_TIM1EN_Bit 0
 
 #ifdef __cplusplus
 extern "C" {
@@ -167,6 +291,56 @@ volatile int LCKR; //0x1c
 volatile int AFRL; //0x20
 volatile int AFRH; //0x24
 } GPIO_type;
+
+typedef struct   {
+volatile int BCR1; //0x00
+union {
+    volatile int BTR1; //0x04
+    volatile int BWTR1; //0x04
+};
+volatile int BCR2;//0x08
+union {
+    volatile int BTR2; //0x0C
+    volatile int BWTR2; //0x0C
+};
+volatile int BCR3; //0x10
+union {
+    volatile int BTR3; //0x14
+    volatile int BWTR3; //0x14
+};
+volatile int BCR4; //0x18
+union {
+    volatile int BTR4; //0x1C
+    volatile int BWTR4; //0x1C
+};
+volatile int PCR2; // 0x60
+volatile int SR2; // 0x64
+volatile int PMEM2; // 0x68
+volatile int PATT2; // 0x6C
+unsigned int reserved1; // 0x70
+volatile int ECCR2; // 0x74
+unsigned int reserved2[2]; // 0x78 - 0x7C
+volatile int PCR3; // 0x80
+volatile int SR3; // 0x84
+volatile int PMEM3; // 0x88
+volatile int PATT3; // 0x8C
+unsigned int reserved3; // 0x90
+volatile int ECCR3; // 0x94
+unsigned int reserved4[2]; // 0x98 - 0x9C
+volatile int PCR4; // 0xA0
+volatile int SR4; // 0xA4
+volatile int PMEM4; // 0xA8
+volatile int PATT4; // 0xAC
+volatile int PIO4; // 0xB0
+unsigned int reserved5[36]; // 0xB4 - 0x13C
+volatile int SDCR_1; // 0x140
+volatile int SDCR_2; // 0x144
+volatile int SDTR1; // 0x148
+volatile int SDTR2; // 0x14C
+volatile int SDCMR; // 0x150
+volatile int SDRTR; // 0x154
+volatile int SDSR; // 0x158
+} FMC_type;
 
 extern NVIC_type* NVIC_GetRegister();
 extern void GPIO_TogglePin(GPIO_type* gpio, int pin);
