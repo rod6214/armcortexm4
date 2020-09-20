@@ -56,6 +56,8 @@
 #define TIM2_BASE (0x40000000)
 #define NVIC_BASE (0xE000E000)
 #define GPIOA_BASE (0x40020000)
+#define FLASH_INTERFACE_BASE (0x40023C00)
+
 #define NVIC_ISER_BASE (NVIC_BASE + 0x100)
 #define NVIC_ICER_BASE (NVIC_BASE + 0x180)
 #define NVIC_ISPR_BASE (NVIC_BASE + 0x200)
@@ -66,6 +68,7 @@
 #define RCC ((RCC_type *)RCC_BASE)
 #define TIM2 ((TIM_type *)TIM2_BASE)
 #define GPIOA ((GPIO_type *)GPIOA_BASE)
+#define FLASHI ((FLASHI_type *)FLASH_INTERFACE_BASE)
 // TIM register bits
 #define TIM_SR_UIF_Bit 0
 #define TIM_SR_CC1IF_Bit 1
@@ -89,7 +92,8 @@
 #define RCC_CR_HSEON_Bit 16
 #define RCC_CR_HSICAL_8Bits 8
 #define RCC_CR_HSITRIM_5Bits 3
-#define RCC_CR_HSION_Bit 1
+#define RCC_CR_HSIRDY_Bit 1
+#define RCC_CR_HSION_Bit 0
 // RCC_PLLCFGR register bits
 #define RCC_PLLCFGR_PLLQ_4Bits 24
 #define RCC_PLLCFGR_PLLSRC_Bit 22
@@ -201,6 +205,67 @@
 #define APB2ENR_USART1EN_Bit 4
 #define APB2ENR_TIM8EN_Bit 1
 #define APB2ENR_TIM1EN_Bit 0
+// RCC_PLLCFGR_PLLP Divisions
+#define RCC_PLLCFGR_PLLP_div_by_2 0
+#define RCC_PLLCFGR_PLLP_div_by_4 (1UL << RCC_PLLCFGR_PLLP_2Bits)
+#define RCC_PLLCFGR_PLLP_div_by_6 (2UL << RCC_PLLCFGR_PLLP_2Bits)
+#define RCC_PLLCFGR_PLLP_div_by_8 (3UL << RCC_PLLCFGR_PLLP_2Bits)
+// RCC_PLLCFGR_PLLN Divisions
+#define RCC_PLLCFGR_PLLN_mul_by_(x) (x << RCC_PLLCFGR_PLLN_9Bits)
+// RCC_PLLCFGR_PLLM Divisions
+#define RCC_PLLCFGR_PLLM_div_by_(x) (x << RCC_PLLCFGR_PLLM_6Bits)
+// RCC_PLLCFGR_PLLSRC
+#define RCC_PLLCFGR_HSE_AS_SOURCE_CLOCK (1UL << RCC_PLLCFGR_PLLSRC_Bit)
+// RCC_PLLCFGR_PLLQ
+#define RCC_PLLCFGR_PLLQ_div_by_(x) (x << RCC_PLLCFGR_PLLQ_4Bits)
+#define RCC_PLLCFGR_HSE_IS_READY() (RCC->CR & (1UL << RCC_CR_HSERDY_Bit)) == (1UL << RCC_CR_HSERDY_Bit)
+#define RCC_PLLCFGR_HSI_IS_READY() (RCC->CR & (1UL << RCC_CR_HSIRDY_Bit)) == (1UL << RCC_CR_HSIRDY_Bit)
+#define RCC_PLLCFGR_PLL_IS_READY() (RCC->CR & (1UL << RCC_CR_PLLRDY_Bit)) == (1UL << RCC_CR_PLLRDY_Bit)
+// RCC_CR_HSEON
+#define RCC_CR_HSE_ON (1UL << RCC_CR_HSEON_Bit)
+// RCC_CR_HSION
+#define RCC_CR_HSI_ON (1UL << RCC_CR_HSION_Bit)
+// RCC_CR_CSSON
+#define RCC_CR_CSS_ON (1UL << RCC_CR_CSSON_Bit)
+// RCC_CR_PLLON
+#define RCC_CR_PLL_ON (1UL << RCC_CR_PLLON_Bit)
+// FLASH_ACR
+#define FLASH_ACR_LATENCY(x) x & 15UL
+// RCC->CFGR = (5UL << RCC_CFGR_PPRE2_3Bits)
+//     | (5UL << RCC_CFGR_PPRE1_3Bits)
+//     | (7UL << RCC_CFGR_HPRE_4Bits)
+//     | (2UL << RCC_CFGR_SWS_2Bits)
+//     | (2UL << RCC_CFGR_SW_2Bits);
+// PPRE2: APB high-speed prescaler (APB2)
+#define RCC_CFGR_PPRE2_No_Div (3UL << RCC_CFGR_PPRE2_3Bits)
+#define RCC_CFGR_PPRE2_Div_by_2 (4UL << RCC_CFGR_PPRE2_3Bits)
+#define RCC_CFGR_PPRE2_Div_by_4 (5UL << RCC_CFGR_PPRE2_3Bits)
+#define RCC_CFGR_PPRE2_Div_by_8 (6UL << RCC_CFGR_PPRE2_3Bits)
+#define RCC_CFGR_PPRE2_Div_by_16 (7UL << RCC_CFGR_PPRE2_3Bits)
+// PPRE1: APB Low speed prescaler (APB1)
+#define RCC_CFGR_PPRE1_No_Div (3UL << RCC_CFGR_PPRE1_3Bits)
+#define RCC_CFGR_PPRE1_Div_by_2 (4UL << RCC_CFGR_PPRE1_3Bits)
+#define RCC_CFGR_PPRE1_Div_by_4 (5UL << RCC_CFGR_PPRE1_3Bits)
+#define RCC_CFGR_PPRE1_Div_by_8 (6UL << RCC_CFGR_PPRE1_3Bits)
+#define RCC_CFGR_PPRE1_Div_by_16 (7UL << RCC_CFGR_PPRE1_3Bits)
+// HPRE: AHB prescaler
+#define RCC_CFGR_HPRE_No_Div (7UL << RCC_CFGR_HPRE_4Bits)
+#define RCC_CFGR_HPRE_Div_by_2 (8UL << RCC_CFGR_HPRE_4Bits)
+#define RCC_CFGR_HPRE_Div_by_4 (9UL << RCC_CFGR_HPRE_4Bits)
+#define RCC_CFGR_HPRE_Div_by_8 (10UL << RCC_CFGR_HPRE_4Bits)
+#define RCC_CFGR_HPRE_Div_by_16 (11UL << RCC_CFGR_HPRE_4Bits)
+#define RCC_CFGR_HPRE_Div_by_64 (12UL << RCC_CFGR_HPRE_4Bits)
+#define RCC_CFGR_HPRE_Div_by_128 (13UL << RCC_CFGR_HPRE_4Bits)
+#define RCC_CFGR_HPRE_Div_by_256 (14UL << RCC_CFGR_HPRE_4Bits)
+#define RCC_CFGR_HPRE_Div_by_512 (15UL << RCC_CFGR_HPRE_4Bits)
+// SWS: System clock switch status
+#define RCC_CFGR_SWS_HSI (0UL << RCC_CFGR_SWS_2Bits)
+#define RCC_CFGR_SWS_HSE (1UL << RCC_CFGR_SWS_2Bits)
+#define RCC_CFGR_SWS_PLL (2UL << RCC_CFGR_SWS_2Bits)
+// SW: System clock switch
+#define RCC_CFGR_SW_HSI (0UL << RCC_CFGR_SW_2Bits)
+#define RCC_CFGR_SW_HSE (1UL << RCC_CFGR_SW_2Bits)
+#define RCC_CFGR_SW_PLL (2UL << RCC_CFGR_SW_2Bits)
 
 #ifdef __cplusplus
 extern "C" {
@@ -341,6 +406,14 @@ volatile int SDCMR; // 0x150
 volatile int SDRTR; // 0x154
 volatile int SDSR; // 0x158
 } FMC_type;
+
+typedef struct {
+volatile int ACR; //0x00
+volatile int KEYR;//0x04
+volatile int OPTKEYR; //0x08
+volatile int SR; //0x0C
+volatile int CR; //0x10
+} FLASHI_type;
 
 extern NVIC_type* NVIC_GetRegister();
 extern void GPIO_TogglePin(GPIO_type* gpio, int pin);
