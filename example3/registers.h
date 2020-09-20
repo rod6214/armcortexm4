@@ -221,6 +221,7 @@
 #define RCC_PLLCFGR_HSE_IS_READY() (RCC->CR & (1UL << RCC_CR_HSERDY_Bit)) == (1UL << RCC_CR_HSERDY_Bit)
 #define RCC_PLLCFGR_HSI_IS_READY() (RCC->CR & (1UL << RCC_CR_HSIRDY_Bit)) == (1UL << RCC_CR_HSIRDY_Bit)
 #define RCC_PLLCFGR_PLL_IS_READY() (RCC->CR & (1UL << RCC_CR_PLLRDY_Bit)) == (1UL << RCC_CR_PLLRDY_Bit)
+#define RCC_CFGR_SWS_IS_READY() ((RCC->CFGR & RCC_CFGR_SWS_PLL) == RCC_CFGR_SWS_PLL)
 // RCC_CR_HSEON
 #define RCC_CR_HSE_ON (1UL << RCC_CR_HSEON_Bit)
 // RCC_CR_HSION
@@ -231,11 +232,6 @@
 #define RCC_CR_PLL_ON (1UL << RCC_CR_PLLON_Bit)
 // FLASH_ACR
 #define FLASH_ACR_LATENCY(x) x & 15UL
-// RCC->CFGR = (5UL << RCC_CFGR_PPRE2_3Bits)
-//     | (5UL << RCC_CFGR_PPRE1_3Bits)
-//     | (7UL << RCC_CFGR_HPRE_4Bits)
-//     | (2UL << RCC_CFGR_SWS_2Bits)
-//     | (2UL << RCC_CFGR_SW_2Bits);
 // PPRE2: APB high-speed prescaler (APB2)
 #define RCC_CFGR_PPRE2_No_Div (3UL << RCC_CFGR_PPRE2_3Bits)
 #define RCC_CFGR_PPRE2_Div_by_2 (4UL << RCC_CFGR_PPRE2_3Bits)
