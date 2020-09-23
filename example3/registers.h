@@ -109,24 +109,32 @@
 #define FMC_SDRTR_MODES2_13Bits 1
 #define FMC_SDRTR_MODES1_Bit 0
 #define FMC_SDRTR_RE_Bit 0
-// Row to column delay
-#define FMC_SDCR_RPIPE_DELAY_CONFIG(x) (x << FMC_SDCRx_RPIPE_2Bits)
-#define FMC_SDCR_BURST_DELAY_CONFIG(x) (x << FMC_SDCRx_RBURST_Bit)
-#define FMC_SDCR_SDCLK_CONFIG(x) (x << FMC_SDCRx_SDCLK_2Bits)
-#define FMC_SDCR_WP_CONFIG(x) (x << FMC_SDCRx_WP_Bit)
-#define FMC_SDCR_CAS_CONFIG(x) (x << FMC_SDCRx_CAS_2Bits)
-#define FMC_SDCR_NB_CONFIG(x) (x << FMC_SDCRx_NB_Bit)
-#define FMC_SDCR_MWID_CONFIG(x) (x << FMC_SDCRx_MWID_2Bits)
-#define FMC_SDCR_NR_CONFIG(x) (x << FMC_SDCRx_NR_2Bits)
-#define FMC_SDCR_NC_CONFIG(x) (x << FMC_SDCRx_NC_2Bits)
-// FMC_SDTR
-#define FMC_SET_TRCD_Delay(x) (x << FMC_SDTR_TRCD_4Bits)
-#define FMC_SET_TRP_Delay(x) (x << FMC_SDTR_TRP_4Bits)
-#define FMC_SET_TWR_Delay(x) (x << FMC_SDTR_TWR_4Bits)
-#define FMC_SET_TRC_Delay(x) (x << FMC_SDTR_TRC_4Bits)
-#define FMC_SET_TRAS_Delay(x) (x << FMC_SDTR_TRAS_4Bits)
-#define FMC_SET_TXSR_Delay(x) (x << FMC_SDTR_TXSR_4Bits)
-#define FMC_SET_TMRD_Delay(x) (x << FMC_SDTR_TMRD_4Bits)
+// FMC_SDCR configs
+#define FMC_SET_RPIPE_Delay(x) (x << FMC_SDCRx_RPIPE_2Bits)
+#define FMC_SET_BURST_Delay(x) (x << FMC_SDCRx_RBURST_Bit)
+#define FMC_SET_SDCLK_Delay(x) (x << FMC_SDCRx_SDCLK_2Bits)
+#define FMC_SET_WP_Delay(x) (x << FMC_SDCRx_WP_Bit)
+#define FMC_SET_CAS_Delay(x) (x << FMC_SDCRx_CAS_2Bits)
+#define FMC_SET_NB_Delay(x) (x << FMC_SDCRx_NB_Bit)
+#define FMC_SET_MWID_Delay(x) (x << FMC_SDCRx_MWID_2Bits)
+#define FMC_SET_NR_Delay(x) (x << FMC_SDCRx_NR_2Bits)
+#define FMC_SET_NC_Delay(x) (x << FMC_SDCRx_NC_2Bits)
+// FMC_SDTR configs
+#define FMC_SET_TRCD_Delay(x) ((x & 15UL) << FMC_SDTR_TRCD_4Bits)
+#define FMC_SET_TRP_Delay(x) ((x & 15UL) << FMC_SDTR_TRP_4Bits)
+#define FMC_SET_TWR_Delay(x) ((x & 15UL) << FMC_SDTR_TWR_4Bits)
+#define FMC_SET_TRC_Delay(x) ((x & 15UL) << FMC_SDTR_TRC_4Bits)
+#define FMC_SET_TRAS_Delay(x) ((x & 15UL) << FMC_SDTR_TRAS_4Bits)
+#define FMC_SET_TXSR_Delay(x) ((x & 15UL) << FMC_SDTR_TXSR_4Bits)
+#define FMC_SET_TMRD_Delay(x) ((x & 15UL) << FMC_SDTR_TMRD_4Bits)
+// FMC_SDCMR configs
+#define FMC_SET_MRD_Delay(x) ((x & 16383UL) << FMC_SDCMR_MRD_13Bits)
+#define FMC_SET_NRFS_Delay(x) ((x & 15UL) << FMC_SDCMR_NRFS_4Bits)
+#define FMC_SET_CTB1_Enabled (1UL << FMC_SDCMR_CTB1_Bit)
+#define FMC_SET_CTB2_Enabled (1UL << FMC_SDCMR_CTB2_Bit)
+#define FMC_SET_MODE_Delay(x) ((x & 15UL) << FMC_SDCMR_MODE_4Bits)
+// #define FMC_SET_TXSR_Delay(x) (x << FMC_SDTR_TXSR_4Bits)
+// #define FMC_SET_TMRD_Delay(x) (x << FMC_SDTR_TMRD_4Bits)
 // TIM register bits
 #define TIM_SR_UIF_Bit 0
 #define TIM_SR_CC1IF_Bit 1
