@@ -57,6 +57,9 @@
 #define NVIC_BASE (0xE000E000)
 #define GPIOA_BASE (0x40020000)
 #define FLASH_INTERFACE_BASE (0x40023C00)
+#define SDRAM_Bank2_BASE (0xD0000000)
+#define SDRAM_Bank1_BASE (0xC0000000)
+#define FMC_BASE (0xA0000000)
 
 #define NVIC_ISER_BASE (NVIC_BASE + 0x100)
 #define NVIC_ICER_BASE (NVIC_BASE + 0x180)
@@ -69,6 +72,61 @@
 #define TIM2 ((TIM_type *)TIM2_BASE)
 #define GPIOA ((GPIO_type *)GPIOA_BASE)
 #define FLASHI ((FLASHI_type *)FLASH_INTERFACE_BASE)
+#define FMC ((FMC_Control_type *)FMC_BASE)
+// #define SDRAM1 ((FMC_type *)SDRAM_Bank1_BASE)
+// #define SDRAM2 ((FMC_type *)SDRAM_Bank2_BASE)
+// SDRAM Controller
+// FMC_SDCR1,2
+#define FMC_SDCRx_RPIPE_2Bits 13
+#define FMC_SDCRx_RBURST_Bit 12
+#define FMC_SDCRx_SDCLK_2Bits 10
+#define FMC_SDCRx_WP_Bit 9
+#define FMC_SDCRx_CAS_2Bits 7
+#define FMC_SDCRx_NB_Bit 6
+#define FMC_SDCRx_MWID_2Bits 4
+#define FMC_SDCRx_NR_2Bits 2
+#define FMC_SDCRx_NC_2Bits 0
+// FMC_SDTR1,2
+#define FMC_SDTR_TRCD_4Bits 24
+#define FMC_SDTR_TRP_4Bits 20
+#define FMC_SDTR_TWR_4Bits 10
+#define FMC_SDTR_TRC_4Bits 9
+#define FMC_SDTR_TRAS_4Bits 7
+#define FMC_SDTR_TXSR_4Bits 6
+#define FMC_SDTR_TMRD_4Bits 4
+// FMC_SDCMR
+#define FMC_SDCMR_MRD_13Bits 9
+#define FMC_SDCMR_NRFS_4Bits 5
+#define FMC_SDCMR_CTB1_Bit 4
+#define FMC_SDCMR_CTB2_Bit 3
+#define FMC_SDCMR_MODE_4Bits 0
+// FMC_SDRTR
+#define FMC_SDRTR_REIE_Bit 14
+#define FMC_SDRTR_COUNT_13Bits 1
+#define FMC_SDRTR_CRE_Bit 0
+// FMC_SDSR
+#define FMC_SDRTR_BUSY_Bit 14
+#define FMC_SDRTR_MODES2_13Bits 1
+#define FMC_SDRTR_MODES1_Bit 0
+#define FMC_SDRTR_RE_Bit 0
+// Row to column delay
+#define FMC_SDCR_RPIPE_DELAY_CONFIG(x) (x << FMC_SDCRx_RPIPE_2Bits)
+#define FMC_SDCR_BURST_DELAY_CONFIG(x) (x << FMC_SDCRx_RBURST_Bit)
+#define FMC_SDCR_SDCLK_CONFIG(x) (x << FMC_SDCRx_SDCLK_2Bits)
+#define FMC_SDCR_WP_CONFIG(x) (x << FMC_SDCRx_WP_Bit)
+#define FMC_SDCR_CAS_CONFIG(x) (x << FMC_SDCRx_CAS_2Bits)
+#define FMC_SDCR_NB_CONFIG(x) (x << FMC_SDCRx_NB_Bit)
+#define FMC_SDCR_MWID_CONFIG(x) (x << FMC_SDCRx_MWID_2Bits)
+#define FMC_SDCR_NR_CONFIG(x) (x << FMC_SDCRx_NR_2Bits)
+#define FMC_SDCR_NC_CONFIG(x) (x << FMC_SDCRx_NC_2Bits)
+// FMC_SDTR
+#define FMC_SET_TRCD_Delay(x) (x << FMC_SDTR_TRCD_4Bits)
+#define FMC_SET_TRP_Delay(x) (x << FMC_SDTR_TRP_4Bits)
+#define FMC_SET_TWR_Delay(x) (x << FMC_SDTR_TWR_4Bits)
+#define FMC_SET_TRC_Delay(x) (x << FMC_SDTR_TRC_4Bits)
+#define FMC_SET_TRAS_Delay(x) (x << FMC_SDTR_TRAS_4Bits)
+#define FMC_SET_TXSR_Delay(x) (x << FMC_SDTR_TXSR_4Bits)
+#define FMC_SET_TMRD_Delay(x) (x << FMC_SDTR_TMRD_4Bits)
 // TIM register bits
 #define TIM_SR_UIF_Bit 0
 #define TIM_SR_CC1IF_Bit 1
@@ -401,7 +459,7 @@ volatile int SDTR2; // 0x14C
 volatile int SDCMR; // 0x150
 volatile int SDRTR; // 0x154
 volatile int SDSR; // 0x158
-} FMC_type;
+} FMC_Control_type;
 
 typedef struct {
 volatile int ACR; //0x00

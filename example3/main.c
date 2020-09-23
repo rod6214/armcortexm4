@@ -2,6 +2,7 @@
 #include "interrupts.h"
 
 void Config_SystemClock();
+void SDRAM_init();
 
 int main() {
     NVIC_type* _nvic = NVIC_GetRegister();
@@ -60,4 +61,14 @@ void Config_SystemClock() {
     | RCC_CFGR_SW_PLL;
 
     while (!RCC_CFGR_SWS_IS_READY());
+}
+
+void SDRAM_init() {
+    FMC->SDCR_1 = 0; // The RBURST and RPIPE must be programmed in the FMC_SDTR1
+    FMC->SDTR1 = 0; // The TRP and TRC timings must be programmed in the FMC_SDTR1
+    FMC->SDCR_2 = 0;
+    FMC->SDTR2 = 0;
+    // Wait about 100us here
+    FMC->SDCMR = 0;
+    FMC->SDRTR = 0;
 }
