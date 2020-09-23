@@ -106,8 +106,8 @@
 #define FMC_SDRTR_CRE_Bit 0
 // FMC_SDSR
 #define FMC_SDRTR_BUSY_Bit 14
-#define FMC_SDRTR_MODES2_13Bits 1
-#define FMC_SDRTR_MODES1_Bit 0
+#define FMC_SDRTR_MODES2_2Bits 1
+#define FMC_SDRTR_MODES1_2Bits 0
 #define FMC_SDRTR_RE_Bit 0
 // FMC_SDCR configs
 #define FMC_SET_RPIPE_Delay(x) (x << FMC_SDCRx_RPIPE_2Bits)
@@ -133,6 +133,25 @@
 #define FMC_SET_CTB1_Enabled (1UL << FMC_SDCMR_CTB1_Bit)
 #define FMC_SET_CTB2_Enabled (1UL << FMC_SDCMR_CTB2_Bit)
 #define FMC_SET_MODE_Delay(x) ((x & 15UL) << FMC_SDCMR_MODE_4Bits)
+// FMC_SDRTR configs
+#define FMC_SET_REIE_Delay(x) (x << FMC_SDRTR_REIE_Bit)
+#define FMC_SET_COUNT_Delay(x) ((x & 15UL) << FMC_SDRTR_COUNT_13Bits)
+#define FMC_SET_CRE_Enabled (1UL << FMC_SDRTR_CRE_Bit)
+// FMC_SDSR status
+#define FMC_IS_BUSY_Delay ((FMC->SDSR & (1UL << FMC_SDRTR_BUSY_Bit)) == (1UL << FMC_SDRTR_BUSY_Bit))
+// Bank 2
+#define FMC_IS_NORMAL_MODE_BANK2 (FMC->SDSR | (~(3UL << FMC_SDRTR_MODES1_2Bits))) == ~(3UL << FMC_SDRTR_MODES2_2Bits)
+#define FMC_IS_SELFREFRESH_MODE_BANK2 (FMC->SDSR & (1UL << FMC_SDRTR_MODES2_2Bits)) == (1UL << FMC_SDRTR_MODES2_2Bits)
+#define FMC_IS_POWERDOWN_MODE_BANK2 (FMC->SDSR & (2UL << FMC_SDRTR_MODES2_2Bits)) == (1UL << FMC_SDRTR_MODES2_2Bits)
+// Bank 1
+#define FMC_IS_NORMAL_MODE_BANK1 (FMC->SDSR | (~(3UL << FMC_SDRTR_MODES1_2Bits))) == ~(3UL << FMC_SDRTR_MODES1_2Bits)
+#define FMC_IS_SELFREFRESH_MODE_BANK1 (FMC->SDSR & (1UL << FMC_SDRTR_MODES1_2Bits)) == (1UL << FMC_SDRTR_MODES1_2Bits)
+#define FMC_IS_POWERDOWN_MODE_BANK1 (FMC->SDSR & (2UL << FMC_SDRTR_MODES1_2Bits)) == (1UL << FMC_SDRTR_MODES1_2Bits)
+// #define FMC_IS_NORMAL_MODE_BANK2 (FMC->SDSR & (1UL << FMC_SDRTR_MODES2_2Bits)) == (1UL << FMC_SDRTR_MODES2_2Bits)
+// #define FMC_IS_NORMAL_MODE_BANK1 (FMC->SDSR & (1UL << FMC_SDRTR_MODES1_2Bits)) == 
+// #define FMC_GET_RE_Flag (1UL << FMC_SDRTR_RE_Bit)
+// #define FMC_SET_CTB2_Enabled (1UL << FMC_SDCMR_CTB2_Bit)
+// #define FMC_SET_MODE_Delay(x) ((x & 15UL) << FMC_SDCMR_MODE_4Bits)
 // #define FMC_SET_TXSR_Delay(x) (x << FMC_SDTR_TXSR_4Bits)
 // #define FMC_SET_TMRD_Delay(x) (x << FMC_SDTR_TMRD_4Bits)
 // TIM register bits
