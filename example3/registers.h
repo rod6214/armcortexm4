@@ -51,7 +51,7 @@
 // #define GET_BIT_LOW_REGISTER(__register__, bit) ((__register__) & (option << bit)) == (option << bit)
 #define COMPARE_BITS(__register__, pos, width) ((__register__) & (width << pos)) == (width << pos)
 #define GET_BIT_REGISTER(__register__, bit) COMPARE_BITS(__register__, bit, 1UL)
-
+// Registers
 #define RCC_BASE (0x40023800)
 #define TIM2_BASE (0x40000000)
 #define NVIC_BASE (0xE000E000)
